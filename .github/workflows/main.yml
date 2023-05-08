@@ -1,0 +1,31 @@
+name: main
+on:
+  push:
+    branches:
+      - main
+jobs:
+  job-cypress:  
+    name: Cypress Tests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v3
+      - name: cypress_integration_test
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: cd cloud-resume-challenge/tests/cypress/integration && npx cypress run cypress_test.js -v
+  job-unit: 
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v3
+      - name: pytest_unit_test
+        run: cd cloud-resume-challenge/tests/unit && pytest test_handler.py -v
