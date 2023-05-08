@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: cd cypress/e2e && npx cypress run --record --key 53974994-9c0b-4961-a016-b66fa7eced9a
+      - run: cd cypress/e2e/cypress_test.cy.js && npx cypress run --record --key 53974994-9c0b-4961-a016-b66fa7eced9a
 
   job-unit: 
     name: Unit Tests
