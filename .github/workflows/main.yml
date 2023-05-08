@@ -1,13 +1,14 @@
 name: main
 on: [push]
-
 jobs:
-  job-cypress:  
-    name: Cypress Tests
-    runs-on: ubuntu-latest
+  cypress-run:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 2
     steps:
-      - uses: actions/checkout@v3
-      - run: npx cypress run --spec cd cypress/e2e/cypress_test.cy.js 
+    uses: cloud-resume-challenge/tests/cypress/integration/cypress_test.cy.js
+      with:
+        build: npm run build
+        start: npm start
 
   job-unit: 
     name: Unit Tests
