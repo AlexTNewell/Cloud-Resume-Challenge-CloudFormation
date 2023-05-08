@@ -5,5 +5,8 @@ jobs:
     runs-on: ubuntu-22.04
     timeout-minutes: 2
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
       - uses: cloud-resume-challenge/tests/cypress/integration/cypress_test.cy.js@v1
-      - run: cd cloud-resume-challenge/tests/cypress/integration && run cypress_test.cy.js
+      - run: run cypress_test.cy.js
+      
