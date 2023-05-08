@@ -7,17 +7,14 @@ jobs:
   job-cypress:  
     name: Cypress Tests
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
-    timeout-minutes: 2
     steps:
       - uses: actions/checkout@v3
       - name: cypress_integration_test
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-      - run: cd cloud-resume-challenge/tests/cypress/integration && npx cypress run cypress_test.js -v
+      - run: cd cypress/e2e && npx cypress run --record --key 53974994-9c0b-4961-a016-b66fa7eced9a
+
   job-unit: 
     name: Unit Tests
     runs-on: ubuntu-latest
