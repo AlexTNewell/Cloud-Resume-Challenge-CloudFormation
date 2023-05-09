@@ -10,7 +10,7 @@ async function foo() {
 
 foo();
 
-if(foo() !== null) && (foo() =<0) {
+if(foo() !== null && foo() =<0) {
     console.log('PASS')     
 }
 
