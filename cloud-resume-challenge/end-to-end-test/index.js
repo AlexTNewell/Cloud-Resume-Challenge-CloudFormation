@@ -1,24 +1,23 @@
-const puppeteer = require('puppeteer');
-const { DOMAIN_NAME } = require('../config.json');
+describe('response status is 200', () => {
+    it('GET', () => {
+        cy.request('GET', 'https://hr1w97khtd.execute-api.us-east-1.amazonaws.com/Prod/count')
+        .then((res) => {expect(res).to.have.property('status', 200)
+        })        
+    })
+})
 
-const sleep = async (r) => await new Promise(r => setTimeout(r, 2000));
+describe('response body is not null', () => {
+    it('GET', () => {
+        cy.request('GET', 'https://hr1w97khtd.execute-api.us-east-1.amazonaws.com/Prod/count')
+        .then((res) => {expect(res.body).to.not.be.null
+        })        
+    })
+})
 
-(async () => {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    const website = `http://website.${DOMAIN_NAME}`
-    console.log(`Loading: ${website}`)
-    await page.goto(website)
-    console.log(`Waiting for API calls to be made`)
-    await sleep(2000)
-    const element = await page.$("#replaceme")
-    const property = await element.getProperty('innerHTML');
-    const count = await property.jsonValue();
-    console.log(`Getting page element, count: ${count}`)
-    if (!count) {
-        throw new Error("Cannot find count value")
-    } else {
-        console.log("PASS");
-    }
-    await browser.close();
-})();
+describe('response body count element is positive number', () => {
+     it('GET', () => {
+         cy.request('GET', 'https://hr1w97khtd.execute-api.us-east-1.amazonaws.com/Prod/count').then((res) => {
+             expect(res.body).to.be.greaterThan(0)
+         })        
+     })
+ })
