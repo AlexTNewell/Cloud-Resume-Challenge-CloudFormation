@@ -1,12 +1,15 @@
 name: main
-on: [push]
+on: push
+
 jobs:
-  cypress-run:
-    runs-on: ubuntu-22.04
-    timeout-minutes: 2
+  end-to-end-test:
+    runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-      - name: Use local my-action
-        uses: ./.github/actions/my-action
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - run: cd cloud-resume-challenge/end-to-end-test && npm install && node index.js
+
+      
       
