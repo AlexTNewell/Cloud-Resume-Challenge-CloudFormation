@@ -12,10 +12,3 @@ async function foo() {
 
 foo();
 
-if(foo()>=0) {
-    console.log('PASS')     
-}
-
-else {
-     console.log('FAIL')     
-}
