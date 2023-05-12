@@ -6,6 +6,13 @@ async function foo() {
   const res = await fetch('https://hr1w97khtd.execute-api.us-east-1.amazonaws.com/Prod/count')
 
   obj = await res.json();
+  
+  if(obj>=0) {
+      console.log('PASS')     
+  }
 
-  console.log(obj)
-}
+  else {
+       console.log('FAIL')     
+  }
+  
+  }
