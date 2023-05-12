@@ -8,7 +8,6 @@ region = "us-east-1"
 capabilities = "CAPABILITY_IAM"
 confirm_changeset = true
 s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-5xl1ly948mec"
-resolve_s3 = true
 image_repositories = []
 dependencies = [
     "requests==2.29.0",
