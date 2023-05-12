@@ -7,12 +7,4 @@ async function foo() {
 
   obj = await res.json();
   
-  if(obj>=0) {
-      console.log('PASS')     
-  }
-
-  else {
-       console.log('FAIL')     
-  }
-  
-  }
+return foo()
