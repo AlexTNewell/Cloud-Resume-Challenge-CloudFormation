@@ -9,7 +9,7 @@ async function foo() {
 
     console.log(obj);
 
-    if (obj >= 0) {
+    if (obj >= 600) {
         console.log("PASS");
     } else {
         throw new Error("Cannot find count value")
