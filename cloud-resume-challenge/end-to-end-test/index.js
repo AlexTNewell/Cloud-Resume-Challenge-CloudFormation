@@ -1,25 +1,28 @@
 const fetch = require("node-fetch");
 
-describe('response status is 200', () => {
-    it('GET', () => {
-        cy.request('GET', 'https://hr1w97khtd.execute-api.us-east-1.amazonaws.com/Prod/count')
-        .then((res) => {expect(res).to.have.property('status', 200)
-        })        
-    })
-})
+async function foo() {
+    let obj;
 
-describe('response body is not null', () => {
-    it('GET', () => {
-        cy.request('GET', 'https://hr1w97khtd.execute-api.us-east-1.amazonaws.com/Prod/count')
-        .then((res) => {expect(res.body).to.not.be.null
-        })        
-    })
-})
+    const res = await fetch('https://hr1w97khtd.execute-api.us-east-1.amazonaws.com/Prod/count')
 
-describe('response body count element is positive number', () => {
-     it('GET', () => {
-         cy.request('GET', 'https://hr1w97khtd.execute-api.us-east-1.amazonaws.com/Prod/count').then((res) => {
-             expect(res.body).to.be.greaterThan(0)
-         })        
-     })
- })
+    obj = await res.json();
+
+    console.log(obj);
+
+}
+
+return foo();
+
+
+
+async function twoHundred() { 
+    let status;
+
+    const response = await fetch('https://hr1w97khtd.execute-api.us-east-1.amazonaws.com/Prod/count').then((response) => {expect(response).to.have.property('status', 200)
+
+    answer = await response.json();
+
+    console.log(answer);
+}
+
+return twoHundred();
