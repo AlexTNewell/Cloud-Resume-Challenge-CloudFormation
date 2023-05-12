@@ -14,5 +14,6 @@ async function foo() {
     } else {
         throw new Error("Cannot find count value")
     }
+}
 
-    return foo();
+return foo();
