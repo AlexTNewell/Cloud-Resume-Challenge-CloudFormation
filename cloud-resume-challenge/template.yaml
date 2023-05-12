@@ -101,7 +101,7 @@ Resources:
           TableName: cloud_resume_challenge
       CodeUri: count_function/
       Handler: app.count_function
-      Runtime: python3.9
+      Runtime: python3.11.1
       Architectures:
         - x86_64
       Events:
