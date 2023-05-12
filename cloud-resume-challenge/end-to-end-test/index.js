@@ -1,14 +1,25 @@
 const fetch = require("node-fetch");
 
-async function foo() {
-    let obj;
+describe('response status is 200', () => {
+    it('GET', () => {
+        cy.request('GET', 'https://hr1w97khtd.execute-api.us-east-1.amazonaws.com/Prod/count')
+        .then((res) => {expect(res).to.have.property('status', 200)
+        })        
+    })
+})
 
-    const res = await fetch('https://hr1w97khtd.execute-api.us-east-1.amazonaws.com/Prod/count')
+describe('response body is not null', () => {
+    it('GET', () => {
+        cy.request('GET', 'https://hr1w97khtd.execute-api.us-east-1.amazonaws.com/Prod/count')
+        .then((res) => {expect(res.body).to.not.be.null
+        })        
+    })
+})
 
-    obj = await res.json();
-
-    console.log(obj);
-
-}
-
-return foo();
+describe('response body count element is positive number', () => {
+     it('GET', () => {
+         cy.request('GET', 'https://hr1w97khtd.execute-api.us-east-1.amazonaws.com/Prod/count').then((res) => {
+             expect(res.body).to.be.greaterThan(0)
+         })        
+     })
+ })
