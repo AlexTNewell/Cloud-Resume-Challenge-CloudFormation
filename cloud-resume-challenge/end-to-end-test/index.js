@@ -7,4 +7,6 @@ async function foo() {
 
   obj = await res.json();
   
+  }
+  
 return foo()
