@@ -9,6 +9,3 @@ async function foo() {
 
   console.log(obj)
 }
-
-foo();
-
