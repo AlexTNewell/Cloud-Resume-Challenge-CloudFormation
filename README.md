@@ -7,16 +7,16 @@ Full details can be found here: https://cloudresumechallenge.dev/docs/the-challe
 A useful guide to the challenge has been provided here: https://www.youtube.com/watch?v=e7vZe7qZFmE&list=PLEk97Q5Nj5oesA1WNk7DzaUpZUnCsQFVQ
 
 ## Skills and Technologies Used:
-*Software Development (Frontend / Backend)
-*IaC (Infrastructure as Code) using CloudFormation, SAM, CDK
-*CI/CD (GiutHub Actions)
-*Serverless Architecture on AWS (Lambda, API Gateway, DynamoDB, S3)
-*Security (IAM, bucket policies, API authentication/authorization)
-*Networking (DNS using Route53)
+* Software Development (Frontend / Backend)
+* IaC (Infrastructure as Code) using CloudFormation, SAM, CDK
+* CI/CD (GiutHub Actions)
+* Serverless Architecture on AWS (Lambda, API Gateway, DynamoDB, S3)
+* Security (IAM, bucket policies, API authentication/authorization)
+* Networking (DNS using Route53)
 
 ## Phase 1 - Certification
-*First challenge is to complete AWS Cloud Practitioner certification exam.
-*I successfully passed the exam on Feb 27, 2023
+* First challenge is to complete AWS Cloud Practitioner certification exam.
+* I successfully passed the exam on Feb 27, 2023
 
 ## Phase 2 - Creating the Front End
 
