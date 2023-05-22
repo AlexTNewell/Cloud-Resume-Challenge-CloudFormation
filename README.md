@@ -1,6 +1,6 @@
 # CLOUD-RESUME-CHALLENGE
 ## Introduction
-The Cloud Resume Challenge is a series of challenges, which deepen AWS knowledge and provide an opportunity to perform technical experience using AWS. The main goal is to create and deploy the static website hosting a resume.
+The Cloud Resume Challenge is a series of challenges, each of which enhances your AWS knowledge and provides an opportunity to showcase technical experience in using AWS. The main goal is to create and deploy a static website hosting a resume.
 
 Full details can be found here: https://cloudresumechallenge.dev/docs/the-challenge/aws/
 
