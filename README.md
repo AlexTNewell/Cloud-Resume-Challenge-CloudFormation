@@ -20,7 +20,7 @@ A useful guide to the challenge has been provided here: https://www.youtube.com/
 
 ## Phase 2 - Creating the Front End
 
-*All AWS resources should be deployed using the template.yaml as a part of Infrastructure as Code requirement.*
+*All AWS resources should be deployed using the template.yaml as a part of the Infrastructure as Code requirement.*
 
 1. Build the visual representation of resume using plain HTML, CSS and JavaScript.
 2. Using AWS Vault and SAM deploy the HTML, CSS and JavaScript to an S3 bucket. The S3 website URL should use HTTPS for security.
