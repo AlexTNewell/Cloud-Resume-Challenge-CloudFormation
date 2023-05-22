@@ -1,0 +1,239 @@
+/* Background & Layout */
+:root {
+    background-color: grey;
+
+}
+
+
+.container {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    background-color: grey;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr 1fr;
+    grid-template-rows: 0.3fr 0.3fr 1fr 3.4fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "skills-and-certififctaions name name"
+        "skills-and-certififctaions summary summary"
+        "skills-and-certififctaions experience experience"
+        "skills-and-certififctaions experience experience"
+        ". . .";
+}
+
+
+.name {
+    grid-area: name;
+    background-color: #273053;
+    margin: 2px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.contact {
+    grid-area: contact;
+    background-color: #273053;
+    margin: 2px;
+    padding: 20px;
+}
+
+.summary {
+    grid-area: summary;
+    background-color: white;
+    margin: 2px;
+    text-align: justify;
+    padding: 20px;
+
+}
+
+.skills-and-certififctaions {
+    grid-area: skills-and-certififctaions;
+    background-color: #273053;
+    margin: 2px;
+    padding: 20px;
+}
+
+
+
+.experience {
+    grid-area: experience;
+    background-color: white;
+    margin: 2px;
+    padding: 20px;
+}
+
+
+
+
+/* Text Formats */
+
+
+h1 {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    font-weight: normal;
+
+}
+
+h2 {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 0px
+}
+
+h3 {
+    color: #0dcaf0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 0px
+}
+
+h4 {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 0px
+}
+
+h5 {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 0px
+}
+
+
+.aside-headers {
+    text-align: left;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main-headers {
+    text-align: left;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.whiteText {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.blackText {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.cv-dates {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: right;
+    font-style: italic;
+}
+
+/* element formatting */
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+li {
+    list-style-type: none;
+    list-style: none;
+}
+
+
+ol {
+
+    list-style-type: none;
+    list-style: none;
+
+}
+
+ul {
+
+    list-style-type: none;
+    list-style: none;
+
+}
+
+.cv-summary {
+    color: black;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cv-main-body {
+    color: black;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bullet {
+    list-style: disc;
+    list-style-type: disc;
+}
+
+.main-body-heading-dates {
+    text-align: right;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.TvFilmGuide {
+    color: #0d6efd;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+
+}
+
+.badgeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    height: 120px;
+    width: 120px
+}
+
+
+@media only screen and (max-width: 800px) {
+    :root {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .container {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.05fr 0.1fr 1fr 0.3fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "name"
+            "summary"
+            "experience"
+            "skills-and-certififctaions";
+    }
+
+
+
+
+}
