@@ -51,29 +51,66 @@ Resources:
       ValidationMethod: DNS
 
   MyDistribution:
-    Type: "AWS::CloudFront::Distribution"
+    Type: AWS::CloudFront::Distribution
     Properties:
       DistributionConfig:
         ViewerCertificate:
-          AcmCertificateArn: !Ref MyCertificate
-          SslSupportMethod: sni-only
-        Aliases: 
-          - objectivelyuncool.com # TODO: Don't hardcode me
-        DefaultCacheBehavior:
-          ViewerProtocolPolicy: allow-all
-          TargetOriginId: paul-burrells-butlers.s3-website-us-east-1.amazonaws.com
-          DefaultTTL: 0
-          MinTTL: 0
-          MaxTTL: 0
-          ForwardedValues:
-            QueryString: false
+            AcmCertificateArn: !Ref MyCertificate
+            SslSupportMethod: sni-only
         Origins:
           - DomainName: paul-burrells-butlers.s3-website-us-east-1.amazonaws.com
             Id: paul-burrells-butlers.s3-website-us-east-1.amazonaws.com
             CustomOriginConfig:
+              HTTPPort: 80
+              HTTPSPort: 443
               OriginProtocolPolicy: match-viewer
-        Enabled: "true"
+              OriginSSLProtocols:
+                - SSLv3
+        Enabled: true
+        IPV6Enabled: true
         DefaultRootObject: index.html
+        DefaultCacheBehavior:
+          AllowedMethods:
+            - DELETE
+            - GET
+            - HEAD
+            - OPTIONS
+            - PATCH
+            - POST
+            - PUT
+          CachedMethods:
+            - GET
+            - HEAD
+          TargetOriginId: paul-burrells-butlers.s3-website-us-east-1.amazonaws.com
+          ForwardedValues:
+            QueryString: false
+            Cookies:
+              Forward: none
+          ViewerProtocolPolicy: allow-all
+          MinTTL: 0
+          DefaultTTL: 0
+          MaxTTL: 0
+        PriceClass: PriceClass_100
+        Restrictions:
+          GeoRestriction:
+            RestrictionType: whitelist
+            Locations:
+              - US
+              - CA
+              - AU
+              - NZ
+              - GB
+              - NO
+              - SE
+              - IE
+              - DE
+              - DK
+              - NL
+        ViewerCertificate:
+          AcmCertificateArn: arn:aws:acm:us-east-1:952832413145:certificate/2b419c03-a5ce-450e-b8ee-0c51681083aa
+          SslSupportMethod: sni-only
+        Aliases:
+          - objectivelyuncool.com
 
   BucketPolicy:
     Type: AWS::S3::BucketPolicy
