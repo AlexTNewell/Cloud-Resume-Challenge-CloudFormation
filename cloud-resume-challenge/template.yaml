@@ -87,22 +87,21 @@ Resources:
           MinTTL: 0
           DefaultTTL: 0
           MaxTTL: 0
-          PriceClass: PriceClass_100
-          Restrictions:
-            GeoRestriction:
-              RestrictionType: whitelist
-              Locations:
-                - US
-                - CA
-                - AU
-                - NZ
-                - GB
-                - NO
-                - SE
-                - IE
-                - DE
-                - DK
-                - NL
+        PriceClass: PriceClass_100
+        Restrictions:
+          GeoRestriction:
+            RestrictionType: whitelist
+            Locations:
+              - US
+              - CA
+              - AU
+              - NZ
+              - GB
+              - SE
+              - IE
+              - DE
+              - DK
+              - NL
         ViewerCertificate:
           AcmCertificateArn: arn:aws:acm:us-east-1:952832413145:certificate/2b419c03-a5ce-450e-b8ee-0c51681083aa
           SslSupportMethod: sni-only
