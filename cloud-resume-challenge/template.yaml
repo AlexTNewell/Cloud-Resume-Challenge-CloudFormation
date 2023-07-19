@@ -83,7 +83,7 @@ Resources:
             QueryString: false
             Cookies:
               Forward: none
-          ViewerProtocolPolicy: allow-all
+          ViewerProtocolPolicy: redirect-to-https
           MinTTL: 0
           DefaultTTL: 0
           MaxTTL: 0
