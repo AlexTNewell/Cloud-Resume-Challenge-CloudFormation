@@ -1,4 +1,4 @@
-# Cloud-Resume-Challenge-(CloudFormation)
+# Cloud Resume Challenge (CloudFormation)
 ## Introduction
 The Cloud Resume Challenge is a series of challenges, each of which enhances your AWS knowledge and provides an opportunity to showcase technical experience in using AWS. The main goal is to create and deploy a static website hosting a resume.
 
