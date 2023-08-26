@@ -13,7 +13,7 @@ There is an extension to the challenge that uses Terraform to provision the infr
 https://cloudresumechallenge.dev/docs/extensions/terraform-getting-started/.
 
 For my completed version of the challenge extension see:  
-https://github.com/AlexTNewell/Terraforming-My-Cloud-Resume-Challenge-
+https://github.com/AlexTNewell/Terraforming-My-Cloud-Resume-Challenge
 
 ## A Note About Infrastructure as Code
 In reality all the below steps are completed simultaneously using CloudFormation. However, they are presented here in an artifically chronological order for simplicity. 
